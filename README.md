@@ -9,7 +9,7 @@ npm install
 
 npm start
 
-
+**********************************************************************
 
 Ok, Angular2 component router cannot solve my problem. 
 I have hundreds pages on a web site and don't want my users to make lots of clicks on router componet then find,  they are not sure where to go, they don't even know which pannel to start with(This is your problem ng2 componet router!).
@@ -26,6 +26,6 @@ Add a Output EventEmitter in MyRouterLink to tell its parent router links have b
 Its parrent componet app.component will call  $('#main-menu').smartmenus() after get the message.
 
 
-
+********************************************************
 
 Here is smartmenus domo: http://plnkr.co/edit/GhgAWHv78qerLDcKgKDm?p=preview
