@@ -3,7 +3,7 @@ import { Routes, RouterModule }  from '@angular/router';
 
 
 @Component({
-    templateUrl: "<h1>welcome</h1> welcome"
+    template: "<h1>welcome</h1> welcome page"
 })
 class Welcome { }
 
