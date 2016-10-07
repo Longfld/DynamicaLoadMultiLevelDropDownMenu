@@ -9,7 +9,7 @@ function GetScreens(){
   let screens :Array<string> = ["page1","page2","page3","mypage"]
 
   results.push({ path: '' ,redirectTo: 'welcome', pathMatch: 'full'});
-  results.push({ path: 'welcome', loadChildren: 'app/pws/welcome.module' })
+  results.push({ path: 'welcome', loadChildren: 'app/screens/welcome.module' })
   screens.map(screenId => results.push({path: screenId, loadChildren: 'app/screens/' + screenId + '.module' }))
   return results 
 }
