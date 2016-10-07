@@ -19,3 +19,8 @@ It all starts from https://github.com/Longfld/DynamicalRouter.
 
 Add a Output EventEmitter in MyRouterLink to tell its parent router links have been added.
 Its parrent componet app.component will call  $('#main-menu').smartmenus() after get the message.
+
+
+
+
+Here is smartmenus domo: http://plnkr.co/edit/GhgAWHv78qerLDcKgKDm?p=preview
