@@ -2,7 +2,12 @@
 Angular 2 dynamically load multi-level drop down menu
 
 
+How to run?
+After download, go to folder
 
+npm install
+
+npm start
 
 
 
