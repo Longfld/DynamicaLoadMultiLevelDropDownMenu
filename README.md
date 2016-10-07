@@ -10,6 +10,7 @@ npm install
 npm start
 
 demo :http://plnkr.co/edit/wLqLUoBQYgcDwOgSoRfF?p=preview
+*********************************************************************
 After plnkr demo opened, Click "launch preview in a separate windows" button at right top. squeeze edge of screen slowly and we can see menu line up for mobile devices.
 Now if you drage edge of screen slower to increese size of screen, untill centain time, screen large enough and menu will be back as tablet/ipad/desktop screen automatically then release screen edge, then when you put your cursor on level1 -> level2 -> level3 and you can see "my page" is pup up inside the screen.
 
