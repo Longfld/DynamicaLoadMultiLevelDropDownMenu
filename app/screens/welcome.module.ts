@@ -10,7 +10,7 @@ class Welcome { }
 const routes: Routes = [{ path: '', component: Welcome}];
 
 @NgModule({
-  imports: [ FormsModule, RouterModule.forChild(routes) ],
+  imports: [RouterModule.forChild(routes) ],
   declarations: [ Welcome]
 })
 export default class WelcomeModule { }
