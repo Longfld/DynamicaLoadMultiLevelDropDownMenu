@@ -12,7 +12,7 @@ declare var $: any;
 })
 export class AppComponent implements AfterViewChecked {
 
-     private menuCompleted: boolean = false;
+    private menuCompleted: boolean = false;
     private mainMenuCompleted: boolean = false;
 
      onMenusOK(completed: boolean) { this.menuCompleted = completed;}
@@ -20,11 +20,7 @@ export class AppComponent implements AfterViewChecked {
     ngAfterViewChecked() {
        if (this.menuCompleted && !this.mainMenuCompleted) {
             $('#main-menu').smartmenus();
-        
             this.mainMenuCompleted = true;
-            console.log("mainMenuCompleted=" + this.mainMenuCompleted)
         } 
-       console.log("menuCompleted=" + this.menuCompleted)
     }
-  
 }
