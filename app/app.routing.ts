@@ -10,6 +10,6 @@ function GetScreens(){
 
   results.push({ path: '' ,redirectTo: 'welcome', pathMatch: 'full'});
   results.push({ path: 'welcome', loadChildren: 'app/pws/welcome.module' })
-  screens.map(screenId => results.push({path: screenId, loadChildren: 'app/pws/' + screenId + '.module' }))
+  screens.map(screenId => results.push({path: screenId, loadChildren: 'app/screens/' + screenId + '.module' }))
   return results 
 }
