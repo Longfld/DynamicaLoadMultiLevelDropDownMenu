@@ -12,14 +12,14 @@ npm start
 demo :http://plnkr.co/edit/wLqLUoBQYgcDwOgSoRfF?p=preview
 *********************************************************************
 After plnkr demo opened, Click "launch preview in a separate windows" button at right top. squeeze edge of screen slowly and we can see menu line up for mobile devices.
-Now if you drage edge of screen slower to increese size of screen, untill centain time, screen large enough and menu will be back as tablet/ipad/desktop screen automatically then release screen edge, then when you put your cursor on level1 -> level2 -> level3 and you can see "my page" is pup up inside the screen.
+Now if you drage edge of screen slower to increese size of screen, untill centain time, screen large enough and menu will be back as tablet/ipad/desktop screen automatically then release screen edge, then when you put your cursor on level1 -> level2 -> level3 and you can see "my page" is pup up inside the screen(very smart).
 ********************************************************************
 Question to angular team, when we can have this kind of smartmenu in ng2, not as jquery plugin?
 
 **********************************************************************
 
 Ok, Angular2 component router cannot solve my problem. 
-I have hundreds pages on a web site and don't want my users to make lots of clicks on router componet then find,  they are not sure where to go, they don't even know which pannel to start with(This is your problem ng2 componet router!).
+I have hundreds pages on a web site and don't want my users to make lots of clicks on router componet then find,  they are not sure where to go, they don't even know which pannel to start with(This is your fault, ng2 componet router! And ng2 team, here is challenge for you).
 
 Make things worse, business want to decide which web pages to show after users logon.
 
