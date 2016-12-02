@@ -11,7 +11,7 @@ import { DataServices } from './DataServices';
 @Component({
   selector: 'my-router-link',
   template: '<div #mymenu></div>',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [DataServices]
 })
 
