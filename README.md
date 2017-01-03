@@ -21,9 +21,9 @@ Question to angular team, when we can have this kind of smartmenu in ng2, not as
 Ok, Angular2 component router cannot solve my problem. 
 I have hundreds pages on a web site and don't want my users to make lots of clicks on router componet then find,  they are not sure where to go, they don't even know which pannel to start with(This is your fault: ng2 componet router! And ng2 team, here is a challenge for you).
 
-Make things worse, business want to decide which web pages to show after users logon.
+Make things worse, business wants to decide which web pages to show after users logon.
 
-Currently, jquery smartmenus (https://github.com/vadikom/smartmenus, http://www.smartmenus.org/) can be help for first part of problem. it is mobile/tablet/ipad user friendly as well. Thanks Smartmenus! My https://github.com/Longfld/DynamicalRouter  can solve second part of issue.
+Currently, jquery smartmenus (https://github.com/vadikom/smartmenus, http://www.smartmenus.org/) can be helpfull for first part of problem. it is mobile/tablet/ipad user friendly as well. Thanks Smartmenus! My https://github.com/Longfld/DynamicalRouter  can solve second part of issue.
 
 Now, our chanllege is to plug in jquery smartmenu into existing ng2 application.
 
