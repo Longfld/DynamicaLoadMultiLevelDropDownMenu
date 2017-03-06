@@ -19,6 +19,7 @@ export class MyRouterLink implements OnDestroy, AfterViewInit {
   @ViewChild('mymenu', { read: ViewContainerRef }) target: ViewContainerRef;
   @Output() onMenusOK = new EventEmitter<boolean>();
   private cmpRef: ComponentRef<any>;
+  private _setTimeoutHandler: any;
 
   constructor(private dataServices: DataServices, private compiler: Compiler, private _viewContainerRef: ViewContainerRef) { }
 
@@ -31,7 +32,9 @@ export class MyRouterLink implements OnDestroy, AfterViewInit {
         (
           (this.compileToComponent(returnedmenu)).then((factory: ComponentFactory<any>) => {
             this.cmpRef = this.target.createComponent(factory);
-            if (this.cmpRef) { setTimeout(() => { this.onMenusOK.emit(true), 1 }); }
+            if (this.cmpRef) {
+              this._setTimeoutHandler = setTimeout(() => { this.onMenusOK.emit(true), 1 });
+            }
           })
         ),
       error => console.log(<any>error)
@@ -41,7 +44,8 @@ export class MyRouterLink implements OnDestroy, AfterViewInit {
   ngOnDestroy() {
     if (this.cmpRef) {
       this.cmpRef.destroy();
-    }
+    };
+    clearTimeout(this._setTimeoutHandler)
   }
 
   private compileToComponent(template1: string): Promise<ComponentFactory<any>> {
