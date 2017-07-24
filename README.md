@@ -1,9 +1,9 @@
 # DynamicaLoadMultiLevelDropDownMenu
-Angular 2 (v2.4) dynamically load multi-level drop down menu
+Angular (v4.3.0) dynamically load multi-level drop down menu
 
 
 How to run?
-After download, go to the folder and
+After download, go to the folder and 
 
 npm install
 
@@ -18,7 +18,7 @@ Question to angular team, when we can have this kind of smartmenu in ng2, not as
 
 **********************************************************************
 
-Ok, Angular2 component router cannot solve my problem. 
+Ok, Angular (material menu) component router cannot solve my problem. 
 I have hundreds pages on a web site and don't want my users to make lots of clicks on router componet then find,  they are not sure where to go, they don't even know which pannel to start with(This is your fault: ng2 componet router! And ng2 team, here is a challenge for you).
 
 Make things worse, business wants to decide which web pages to show after users logon.
