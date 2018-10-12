@@ -1,7 +1,8 @@
 
+
 import {
-  NgModule, Component, ViewContainerRef, Compiler,
-  ComponentFactory, ComponentRef, ViewChild, OnDestroy, AfterViewInit, ChangeDetectionStrategy,
+  NgModule, Component, ViewContainerRef, Compiler, OnInit,
+  ComponentFactory, ComponentRef, ViewChild, OnDestroy,
   Output, EventEmitter
 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,19 +12,22 @@ import { DataServices } from './DataServices';
 @Component({
   selector: 'my-router-link',
   template: '<div #mymenu></div>',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [DataServices]
 })
 
-export class MyRouterLink implements OnDestroy, AfterViewInit {
+export class MyRouterLink implements OnDestroy, OnInit {
   @ViewChild('mymenu', { read: ViewContainerRef }) target: ViewContainerRef;
   @Output() onMenusOK = new EventEmitter<boolean>();
   private cmpRef: ComponentRef<any>;
   private _setTimeoutHandler: any;
+  private hasDone: boolean
 
-  constructor(private dataServices: DataServices, private compiler: Compiler, private _viewContainerRef: ViewContainerRef) { }
+  constructor(private dataServices: DataServices, private compiler: Compiler, private _viewContainerRef: ViewContainerRef) {
+    this.hasDone = false;
+  }
 
-  ngAfterViewInit() {
+  
+  ngOnInit() {
     if (this.cmpRef) {
       this.cmpRef.destroy();
     }
@@ -33,11 +37,14 @@ export class MyRouterLink implements OnDestroy, AfterViewInit {
           (this.compileToComponent(returnedmenu)).then((factory: ComponentFactory<any>) => {
             this.cmpRef = this.target.createComponent(factory);
             if (this.cmpRef) {
-              this._setTimeoutHandler = setTimeout(() => { this.onMenusOK.emit(true), 1 });
+              this._setTimeoutHandler = setTimeout(
+                () => { this.onMenusOK.emit(true); this.hasDone = true },
+                10
+              );
             }
           })
         ),
-      error => console.log(<any>error)
+        error => console.log(<any>error)
       );
   }
 
@@ -57,6 +64,7 @@ export class MyRouterLink implements OnDestroy, AfterViewInit {
     class DynamicComponent {
 
     }
+
     @NgModule({
       imports: [BrowserModule, RouterModule],
       declarations: [DynamicComponent]
