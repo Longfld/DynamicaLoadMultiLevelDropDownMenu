@@ -1,5 +1,5 @@
 # DynamicaLoadMultiLevelDropDownMenu
-Angular (v4.3.0) dynamically load multi-level drop down menu
+Angular 6 dynamically load multi-level drop down menu
 
 
 How to run?
