@@ -1,32 +1,29 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { map, distinctUntilChanged, debounceTime, catchError } from 'rxjs/operators';
 
-import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Headers, RequestOptions } from '@angular/http';
-
-import { Observable }     from 'rxjs/Observable';
+import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class DataServices {
-  constructor (private http: Http) {}
+  constructor(private http: HttpClient) { }
 
   private menusUrl = 'app/menu.json';  // URL to web API
 
 
-  GetMenuLinks(): Observable<string> {
-    return this.http.get(this.menusUrl)
-                    .map(this.extractData)
-                    .catch(this.handleError);
-  }
- 
-  private extractData(res: Response) :string {
-    let body = res.json();
-    return  <string>body.data || "";
+  GetMenuLinks() {
+    return this.http.get<string>(this.menusUrl).pipe(
+      debounceTime(100),
+      distinctUntilChanged(),
+      catchError(this.handleError<string>("GetMenuLink"))
+    );
   }
 
-  private handleError (error: any) {
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);
+
+  private handleError<T>(operation = 'operation', error?: T) {
+    return (error: any): Observable<T> => {
+      console.error(`error: ${error.message}`);
+      return of(error as T);
+    };
   }
 }
