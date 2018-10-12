@@ -9,26 +9,27 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "4.3.0",
-    "@angular/compiler": "4.3.0",
-    "@angular/core": "4.3.0",
-    "@angular/forms": "4.3.0",
-    "@angular/http": "4.3.0",
-    "@angular/platform-browser": "4.3.0",
-    "@angular/platform-browser-dynamic": "4.3.0",
-    "@angular/router": "4.3.0",
+    "@angular/common": "6.1.10",
+    "@angular/compiler": "6.1.10",
+    "@angular/core": "6.1.10",
+    "@angular/forms": "6.1.10",
+    "@angular/http": "6.1.10",
+    "@angular/platform-browser": "6.1.10",
+    "@angular/platform-browser-dynamic": "6.1.10",
+    "@angular/router": "6.1.10",
 
-    "core-js": "2.4.1",
-    "rxjs": "5.3.1",
-    "systemjs": "0.19.40",
-    "typescript": "2.2.2",
-    "zone.js": "0.8.12",
+    "core-js": "2.5.5",
+    "rxjs": "6.2.1",
+    "rxjs-compat": "6.2.1",
+    "rxjs-system-bundle": "6.0.0",
+    "systemjs": "0.21.4",
+    "typescript": "3.1.1",
+    "zone.js": "0.8.26",
     "bootstrap": "3.3.6"
   },
   "devDependencies": {
     "concurrently": "3.2.0",
     "lite-server": "2.2.2",
-   
-    "@types/node": "6.0.46"
+    "@types/node": "10.9.4"
   }
 }
