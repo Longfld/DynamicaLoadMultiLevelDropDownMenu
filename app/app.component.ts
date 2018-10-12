@@ -1,5 +1,4 @@
 import { AfterViewChecked,Component } from '@angular/core';
-import './rxjs-operators';
 
 declare var $: any;
 
