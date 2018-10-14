@@ -22,10 +22,10 @@
     "rxjs": "6.2.1",
     "rxjs-compat": "6.2.1",
     "rxjs-system-bundle": "6.0.0",
+    "smartmenus": "1.1.0",
     "systemjs": "0.21.4",
     "typescript": "3.1.1",
-    "zone.js": "0.8.26",
-    "bootstrap": "3.3.6"
+    "zone.js": "0.8.26"
   },
   "devDependencies": {
     "concurrently": "3.2.0",
