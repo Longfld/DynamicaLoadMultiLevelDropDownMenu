@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewChecked {
     ngAfterViewChecked() {
        if (this.menuCompleted && !this.SmartMenuCompleted) {
             $('#main-menu').smartmenus();
-            this.mainMenuCompleted = true;
+            this.SmartMenuCompleted = true;
         } 
     }
 }
